@@ -1,13 +1,13 @@
 import React from 'react'
-import {useSelector} from 'react-redux';
 import { FaSave } from "react-icons/fa"
 import  {saveAs}  from 'file-saver'
-const SaveButton = ({textvalue}) => {
-    const language = useSelector((state) => state.compiler.language) 
+import {useSelector} from 'react-redux'
+const SaveButton = () => {
+    const {language,content} = useSelector((state) => state.compiler); 
     const extension = ['java','cs','py'];
     const saveFile = () => {
         var filename = "hello." + extension[language-1];
-        var blob = new Blob([textvalue], {
+        var blob = new Blob([content], {
             type: "text/plain;charset=utf-8"
         });
         saveAs(blob, filename);
