@@ -57,7 +57,7 @@ const MainContainer = () => {
                     <SelectList />
                 </div>
                 <div className="self-end grow flex justify-center ml-9 max-sm:my-2">
-                    <RunButton textvalue={textValue}/>
+                    <RunButton/>
                 </div>
                 <div className="self-end grow flex flex-wrap justify-around">
                     <div className="self-end">

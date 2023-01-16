@@ -15,7 +15,7 @@ const hightlightWithLineNumbers = (input, language) =>
 
 const EditTextarea = () => {
       const dispatch = useDispatch();
-      const content = useSelector(state => state.compiler.content);
+      const code = useSelector(state => state.compiler.code);
       const inputElement = useRef();
       const areaFocus = () => {
         inputElement.current._input.focus();
@@ -31,7 +31,7 @@ const EditTextarea = () => {
                       ref={inputElement} 
                       autoFocus={true}
                       textareaId="codeArea"
-                      value={content}
+                      value={code}
                       onValueChange={valueChanged}
                       style={{border:'0px!important'}}
                       highlight={code => hightlightWithLineNumbers(code, languages.js)}

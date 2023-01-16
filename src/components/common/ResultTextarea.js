@@ -1,10 +1,14 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const ResultTextarea = () => {
+
+    const result = useSelector(state=> state.compiler.result);
     return (
         <textarea
                 id='editText' 
                 rows="25" 
+                value = {result} 
                 readOnly={true}   
                 className="
                 user-textarea

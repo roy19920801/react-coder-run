@@ -8,18 +8,21 @@ const language = [
   {
     id: 1,
     name: 'Java',
+    value: 'java',
     avatar:
       'SiJava',
   },
   {
     id: 2,
     name: 'C#',
+    value: 'cs',
     avatar:
       'SiCsharp',
   },
   {
     id: 3,
     name: 'Python',
+    value: 'py',
     avatar:
       'SiPython',
   }
@@ -35,7 +38,7 @@ const classNames =  (...classes) => {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    dispatch(setLanguage(selected.id));
+    dispatch(setLanguage(selected.value));
   },[selected]);
   return (
     <Listbox value={selected} onChange={setSelected}>
